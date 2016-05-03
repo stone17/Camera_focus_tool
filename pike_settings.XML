@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<IIDCConfig>
+  <IIDCApplication Name="AVT_UniCam" Version="1.0.0">
+    <Camera Model="Pike F505B" SerialNumber="269108027">
+      <AdditionalSetting Name="MultishotCount">2</AdditionalSetting>
+      <AdditionalSetting Name="FrameBufferCount">3</AdditionalSetting>
+      <AdditionalSetting Name="DebayerMethod">0</AdditionalSetting>
+      <AdditionalSetting Name="DebayerPattern">-1</AdditionalSetting>
+      <AdditionalSetting Name="LutFilename">
+      </AdditionalSetting>
+      <AdditionalSetting Name="LutFileColumnIndex">0</AdditionalSetting>
+    </Camera>
+  </IIDCApplication>
+  <IIDCCamera IIDCSpec="102" IIDCVersion="10301" Vendor="AVT" Type="Pike F505B306" Model="Pike F505B" SelectPolicy="GUID" GUID="A4701100A433B" Firmware="306">
+    <Status>
+      <Camera>
+        <Register name="CurVFrmRate_Revision">60000000</Register>
+        <Register name="CurVMode">0</Register>
+        <Register name="CurVFormat">E0000000</Register>
+        <Register name="ISOChannel_Speed">141C0BB</Register>
+        <Register name="MemorySave">0</Register>
+        <Register name="OneShot_MultiShot">0</Register>
+        <Register name="CurMemCh">10000000</Register>
+        <Format7>
+          <Mode0 current="true">
+            <Register name="ImagePosition">0</Register>
+            <Register name="ImageSize">9940806</Register>
+            <Register name="ColorCoding">5000000</Register>
+            <Register name="BytePerPacket">20002000</Register>
+          </Mode0>
+          <Mode1>
+            <Register name="ImagePosition">0</Register>
+            <Register name="ImageSize">4C80806</Register>
+            <Register name="ColorCoding">5000000</Register>
+            <Register name="BytePerPacket">20002000</Register>
+          </Mode1>
+          <Mode2>
+            <Register name="ImagePosition">0</Register>
+            <Register name="ImageSize">9940400</Register>
+            <Register name="ColorCoding">5000000</Register>
+            <Register name="BytePerPacket">20002000</Register>
+          </Mode2>
+          <Mode3>
+            <Register name="ImagePosition">0</Register>
+            <Register name="ImageSize">4C80402</Register>
+            <Register name="ColorCoding">0</Register>
+            <Register name="BytePerPacket">D840D84</Register>
+          </Mode3>
+          <Mode4>
+            <Register name="ImagePosition">0</Register>
+            <Register name="ImageSize">4C80806</Register>
+            <Register name="ColorCoding">0</Register>
+            <Register name="BytePerPacket">100011DC</Register>
+          </Mode4>
+          <Mode5>
+            <Register name="ImagePosition">0</Register>
+            <Register name="ImageSize">9940402</Register>
+            <Register name="ColorCoding">0</Register>
+            <Register name="BytePerPacket">158C158C</Register>
+          </Mode5>
+          <Mode6>
+            <Register name="ImagePosition">0</Register>
+            <Register name="ImageSize">4C80402</Register>
+            <Register name="ColorCoding">0</Register>
+            <Register name="BytePerPacket">AC00AC0</Register>
+          </Mode6>
+        </Format7>
+      </Camera>
+      <StdFeatures>
+        <Register name="Brightness">82000010</Register>
+        <Register name="AutoExposure">8200007D</Register>
+        <Register name="Gamma">80000001</Register>
+        <Register name="Shutter">820007D0</Register>
+        <Register name="Gain">82000000</Register>
+        <Register name="TriggerMode">81000000</Register>
+      </StdFeatures>
+      <AdvFeatures>
+        <Register name="TimeBase">80041004</Register>
+        <Register name="ExtdShutter">80009C40</Register>
+        <Register name="TestImage">80C00000</Register>
+        <Register name="IntEnaDelay">80000000</Register>
+        <Register name="AutoFncAOI" quadNr="0">80004004</Register>
+        <Register name="AutoFncAOI" quadNr="1">0</Register>
+        <Register name="AutoFncAOI" quadNr="2">9940804</Register>
+        <Register name="TriggerDelay">80000000</Register>
+        <Register name="MirrorImage">80008000</Register>
+        <Register name="Input1">80020000</Register>
+        <Register name="Input2">80000000</Register>
+        <Register name="Output1">C0020000</Register>
+        <Register name="Output2">C0080000</Register>
+        <Register name="Output3">C0070000</Register>
+        <Register name="Output4">C0000000</Register>
+        <Register name="AutoShutter" quadNr="0">80000000</Register>
+        <Register name="AutoShutter" quadNr="1">14</Register>
+        <Register name="AutoShutter" quadNr="2">13FEC</Register>
+        <Register name="AutoGain">829E0000</Register>
+        <Register name="HighSnr">80000000</Register>
+        <Register name="IoPwm1" quadNr="0">80003000</Register>
+        <Register name="IoPwm1" quadNr="1">27104E20</Register>
+        <Register name="IoPwm2" quadNr="0">80003000</Register>
+        <Register name="IoPwm2" quadNr="1">27104E20</Register>
+        <Register name="IoPwm3" quadNr="0">80003000</Register>
+        <Register name="IoPwm3" quadNr="1">27104E20</Register>
+        <Register name="IoPwm4" quadNr="0">80003000</Register>
+        <Register name="IoPwm4" quadNr="1">27104E20</Register>
+        <Register name="AfeChnComp" quadNr="0">80000000</Register>
+        <Register name="AfeChnComp" quadNr="1">FFF3</Register>
+        <Register name="AfeChnComp" quadNr="2">0</Register>
+        <Register name="LowSmear">80000000</Register>
+        <Register name="MaxIsoSize400">80001000</Register>
+        <Register name="MaxIsoSize800">80002000</Register>
+        <Register name="LowNoiseBinning">80000000</Register>
+        <Register name="AfeChnOffset" quadNr="0">80000000</Register>
+        <Register name="AfeChnOffset" quadNr="1">26</Register>
+        <Register name="AfeChnOffset" quadNr="2">0</Register>
+        <Register name="InputDebounce1" quadNr="0">80000003</Register>
+        <Register name="InputDebounce1" quadNr="1">3</Register>
+        <Register name="InputDebounce1" quadNr="2">7FFF</Register>
+        <Register name="InputDebounce2" quadNr="0">80000003</Register>
+        <Register name="InputDebounce2" quadNr="1">3</Register>
+        <Register name="InputDebounce2" quadNr="2">7FFF</Register>
+      </AdvFeatures>
+    </Status>
+  </IIDCCamera>
+</IIDCConfig>

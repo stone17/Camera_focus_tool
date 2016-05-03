@@ -1,0 +1,70 @@
+clc
+clear all
+%function [strehl,fwhm]=focusdiagnostic(x,y,data)
+
+%[X, map] = gray2ind(data,2^16);
+       
+f=imread('f.tiff','tiff');
+len=size(f);
+
+px=0.144; %[pixel size in micron]
+
+imagesc(f)
+
+rect=round(getrect);
+xmin=rect(1);
+ymin=rect(2);
+xmax=rect(1)+rect(3);
+ymax=rect(2)+rect(4);
+
+all=0;
+for a=1:len(1)
+    if a==[rect(2):rect(2)+rect(4)]
+        all=all+sum(f(a,1:rect(1)-1))+sum(f(a,rect(1)+rect(3)+1:len(2)));
+    else
+        all=all+sum(f(a,:));
+    end
+end
+threshold=(all/(len(1)*len(2)-(rect(3)*(rect(4)))));
+threshold=2*ceil(mean(mean(f)));
+threshold=12;
+
+fmax=double(max(max(f(ymin:ymax,xmin:xmax))));
+
+fnumber=length(find(f(ymin:ymax,xmin:xmax)>threshold));
+
+%find pixel above threshold and total number of pixel intensity
+hst(1:256)=0;
+fpix=0;
+for y=rect(2):rect(2)+rect(4)
+    for x=rect(1):rect(1)+rect(3)
+        if f(y,x)>threshold
+            index=round(f(y,x))+1;
+            hst(index)=hst(index)+1;
+            fpix=fpix+double(f(y,x));
+            hold on
+            plot(x,y,'o','color','black')
+        end            
+    end
+end
+
+figure
+semilogy(hst)
+
+%write down intensitiey of each pixel above threshold
+I=[1:256]./fpix*80/(pi*(px*1e-4)^2*500e-15);
+
+
+figure
+plot((I),log(hst))
+maxI=fmax/fpix*80/(pi*(px*1e-4)^2*500e-15)
+
+ s=hst.*[0:255]/fpix*100;
+ 
+ a=256;
+ p=0;
+ while p<50
+     p=p+s(a)
+     a=a-1;
+ end
+ I(a)
